@@ -1,12 +1,29 @@
-# React + Vite
+# Chatbot Banco - Backend en Python con FastAPI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crear cuenta - API para Wit.ai
 
-Currently, two official plugins are available:
+## Estructura del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+chatbot_banco/
+├── app/
+│   ├── adapters/
+│   │   ├── api/                 # Adaptador de entrada (FastAPI)
+│   │   │   └── routes.py
+│   │   └── witai/               # Adaptador de salida (Wit.ai)
+│   │       └── witai_client.py
+│   ├── core/
+│   │   ├── domain/              # Entidades y lógica de negocio
+│   │   │   └── account.py
+│   │   └── services/            # Casos de uso
+│   │       └── account_service.py
+│   └── ports/
+│       ├── input/               # Puertos de entrada (interfaces de casos de uso)
+│       │   └── create_account_port.py
+│       └── output/              # Puertos de salida (interfaces de integración)
+│           └── witai_port.py
+├── main.py
+├── requirements.txt
+└── tests/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+API token wit.ai = QKUN3T3W6S63FLJNRPB6C42XMUI7RQCR
