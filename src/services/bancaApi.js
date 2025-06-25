@@ -9,12 +9,14 @@ export async function enviarPreguntaBancaIA(pregunta) {
   // INICIO DE CÓDIGO DE SIMULACIÓN (SOLO PARA DESARROLLO)
   return new Promise(resolve => {
     setTimeout(() => {
-      let respuestaSimulada = "Esta es una respuesta simulada desde el frontend. ";
+      let respuestaSimulada = "";
       if (pregunta.toLowerCase().includes("hola")) {
         respuestaSimulada += "¡Hola! ¿En qué puedo ayudarte hoy?";
       } else if (pregunta.toLowerCase().includes("saldo")) {
         respuestaSimulada += "Tu saldo simulado es de $1,234.56.";
-      } else {
+      } else if (pregunta.toLowerCase().includes("adios")) {
+        respuestaSimulada += "adios fue un gsto ayudarte";}
+        else {
         respuestaSimulada += "No entendí tu pregunta simulada.";
       }
       resolve(respuestaSimulada);
