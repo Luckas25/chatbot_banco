@@ -2,7 +2,7 @@
 
 Crear cuenta - API para Wit.ai
 
-## Estructura del Proyecto
+## Estructura del Proyecto boseto
 
 
 chatbot_banco/
@@ -26,4 +26,18 @@ chatbot_banco/
 ├── requirements.txt
 └── tests/
 
+
 API token wit.ai = QKUN3T3W6S63FLJNRPB6C42XMUI7RQCR
+
+
+### Descripcion: 
+
+registro de usuario (template unico)
+login (template unico)
+home (template unico)
+chatbot 
+servicio (credito) 
+contrato PDF (template unico)
+firma uuid
+
+
